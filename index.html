@@ -4,8 +4,8 @@
 <link rel="canonical" href="https://codewithraghavv.github.io/datasentry-demo/">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f6fb;color:#242439;font:16px/1.55 system-ui,sans-serif}header,main{max-width:1040px;margin:auto;padding:1.3rem clamp(1rem,4vw,3rem)}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9dcea}a{color:#4939ac}small{color:#565172;font-weight:650}h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.07em;line-height:1;margin:.6rem 0}button{font:inherit;background:#4e40b7;color:white;padding:.7rem 1.1rem;border:0;border-radius:9px;cursor:pointer;font-weight:600}button:focus-visible,a:focus-visible{outline:3px solid #269779;outline-offset:3px}.panel{background:white;border:1px solid #dfe0ec;border-radius:16px;padding:1.25rem 1.5rem;margin-top:1rem}.number{font-weight:720;font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.2;letter-spacing:-.06em}.bad{color:#a32740}.good{color:#146348}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}h2,h3,p{margin:.35rem 0 .8rem}h2{font-size:1.2rem}table{width:100%;border-collapse:collapse}th,td{text-align:left;border-bottom:1px solid #eee;padding:.3rem}footer{padding:1.5rem 0}#action{margin:.65rem 0}.status{font-weight:650}@media(max-width:650px){.grid{grid-template-columns:1fr;gap:0}}
-</style></head><body><header><strong>◈ &nbsp; DataSentry</strong><span>Interactive demo</span></header><main><small>DATA QUALITY &nbsp; / &nbsp; INCIDENT WORKSPACE</small><h1>Order pipeline health</h1><p>Detect a silent failure in a pipeline of 10,000 orders. Follow the revenue difference from cleaning to the executive dashboard.</p>
-<button id="action" type="button">Simulate 25% order loss</button><section aria-live="polite" id="report"></section>
+</style></head><body><header><strong>◈ &nbsp; DataSentry</strong><a href="simulator.html">Open scenario simulator →</a></header><main><small>DATA QUALITY &nbsp; / &nbsp; INCIDENT WORKSPACE</small><h1>Order pipeline health</h1><p>Detect a silent failure in a pipeline of 10,000 orders. Follow the revenue difference from cleaning to the executive dashboard.</p>
+<p><a href="simulator.html">Choose a scenario, configure a fault, or inspect datasets →</a></p><button id="action" type="button">Simulate 25% order loss</button><section aria-live="polite" id="report"></section>
 <footer><small>Guided replay of three recorded DataSentry pipeline runs.</small></footer></main>
 <script src="demo-data.js"></script><script>
 const money = value => value.toLocaleString('en-US',{style:'currency',currency:'USD'});
@@ -20,4 +20,5 @@ function render(){
 }
 document.getElementById('action').onclick=()=>{state=state==='incident'?'recovered':'incident';render()};render()
 </script></body></html>
+
 
